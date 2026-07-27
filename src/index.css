@@ -1,0 +1,343 @@
+/* ========== THEME STYLES ========== */
+
+/* Light Theme Variables */
+.light-theme {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --input-bg: #f0f0f0;
+  --hover-bg: #e8e8e8;
+}
+
+/* Dark Theme Variables (default) */
+.dark-theme {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1a1a1a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --border-color: #2a2a2a;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --input-bg: #0a0a0a;
+  --hover-bg: #2a2a2a;
+}
+
+/* Apply theme variables */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.story-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.story-card:hover {
+  border-color: #8b0000;
+}
+
+.auth-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.auth-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.auth-input:focus {
+  border-color: #8b0000;
+}
+
+.search-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: background 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #8b0000;
+}
+
+.create-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.form-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: background 0.3s ease;
+}
+
+.form-textarea {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: background 0.3s ease;
+}
+
+.comment {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.profile-info {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  padding: 8px 16px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.theme-btn:hover {
+  background: var(--hover-bg);
+  border-color: #8b0000;
+}
+
+/* Scrollbar for light theme */
+.light-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.light-theme::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.light-theme::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.light-theme::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+/* Reading List Styles */
+.reading-list-btn {
+  padding: 8px 20px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.reading-list-btn:hover {
+  border-color: #8b0000;
+}
+
+.reading-list-btn.in-list {
+  background: #8b0000;
+  color: white;
+  border-color: #8b0000;
+}
+
+.reading-list-btn.in-list:hover {
+  background: #aa0000;
+}
+
+.reading-list-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  background: #8b0000;
+  color: white;
+}
+
+/* Reading List Actions */
+.reading-list-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reading-list-actions button {
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.reading-list-actions button:first-child {
+  background: #8b0000;
+  color: white;
+  border: none;
+}
+
+.reading-list-actions button:first-child:hover {
+  background: #aa0000;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
+
+.remove-btn:hover {
+  background: #ff4444;
+  color: white;
+}
+
+/* Story Actions Layout */
+.story-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.story-actions .like-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.story-actions .like-btn:hover {
+  border-color: #8b0000;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .story-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .reading-list-actions {
+    flex-direction: column;
+  }
+  
+  .reading-list-actions button {
+    width: 100%;
+  }
+}
+/* Progress Bar Styles */
+.progress-container {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b0000, #ff4444);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Small progress bar on story cards */
+.story-progress {
+  margin: 10px 0;
+}
+
+.progress-bar-small {
+  width: 100%;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill-small {
+  height: 100%;
+  background: linear-gradient(90deg, #8b0000, #ff4444);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 3px;
+}
+
+/* Story footer with progress */
+.story-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
